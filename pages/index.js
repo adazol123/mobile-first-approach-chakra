@@ -13,6 +13,9 @@ export default function Home() {
   return (
 
     <Container>
+      <Head>
+      <title>Adazolhub</title>
+      </Head>
       <Content/>
     </Container>
   )
