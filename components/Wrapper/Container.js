@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 import styled from "@emotion/styled";
 import { ThemeSwitch } from "../Button/ThemeSwitch";
 import { NavbarNew } from "../Header/NavbarNew";
-import { CenterWrapper } from "../Wrapper/Center";
+import { CenterWrapper } from "./Center";
 
 export const Container = ({ children }) => {
 
@@ -29,7 +29,7 @@ export const Container = ({ children }) => {
                         mt={[2,4,8]}
                         mb={[2,4,8]}
                         py={1}
-
+                        as='header'
         >
         <NavbarNew />
         </StickNav>

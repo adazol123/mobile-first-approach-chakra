@@ -23,24 +23,26 @@ export const Home = () => {
 
             <Heading
                 as='h1'
-                fontSize={['4xl', '6xl']}
-                fontWeight='semibold'
+                fontSize={['3xl', '6xl']}
+                fontWeight='bold'
                 textTransform='uppercase'
-                lineHeight='shorter'
-                letterSpacing='wider'
+                lineHeight='tall'
+                letterSpacing='wide'
                 color={colorMode === 'dark'? 'gray.200' : 'gray.500'}
                 > Hello, I'm Daniel</Heading>
             <Heading
                 as='h2'
-                fontSize={['3xl', '5xl']}
+                fontSize={['2xl', '5xl']}
                 fontWeight='thin'
                 textTransform='uppercase'
                 lineHeight='shorter'
-                letterSpacing='wider'
+                letterSpacing='wide'
                 display='flex'
+                flexWrap='nowrap'
+                
                 >
-                    <Text mr={3} as='h2'>I Am </Text>
-                    <Text color={colorMode === 'dark'? 'custom.primary' : 'custom.secondary'}><Typical steps={data} loop={Infinity} wrapper='h2'/></Text>
+                    <Text mr={[2,4]} as='h2' minWidth='62px'>I Am a</Text>
+                    <Text color={colorMode === 'dark'? 'custom.primary' : 'custom.secondary' }minWidth='max-content' ><Typical steps={data} loop={Infinity} wrapper='h2'/></Text>
                  </Heading>
             </Flex>
             <Text mt={4} pb={8} fontSize={['md','xl']} maxW='60ch'color={colorMode === 'dark'? 'gray.400' : 'gray.300'} >Wanna be a developer with background in computer hardware. I am currently working and learning with React JS, Next JS, Node JS, Figma Design and Blender for 3D graphics objects.</Text>

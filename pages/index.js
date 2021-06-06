@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Navbar } from '../components/Header/Navbar'
 import styles from '../styles/Home.module.css'
 import { Home as Content } from '../components/Content/Home'
-import { Container } from '../components/Content/Container'
+import { Container } from '../components/Wrapper/Container'
 
 export default function Home() {
   const { toggleColorMode } = useColorMode()

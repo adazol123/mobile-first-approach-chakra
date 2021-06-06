@@ -1,7 +1,7 @@
 export const data = [
-    'A Programmer', 8000,
-    'A Noob Dreamer', 8000,
-    'A Developer', 8000,
-    'An Investor', 8000,
+    'Programmer', 8000,
+    'Noob Dreamer', 8000,
+    'Developer', 8000,
+    'Tech Savy', 8000,
 
 ]

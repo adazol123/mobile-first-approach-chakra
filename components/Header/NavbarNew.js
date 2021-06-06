@@ -1,4 +1,4 @@
-import { useColorMode, Button, Flex, Box, Icon } from "@chakra-ui/react"
+import { useColorMode, Button, Flex, Box, Icon, Stack } from "@chakra-ui/react"
 import NextLink from 'next/link'
 import styled from "@emotion/styled";
 import { ThemeSwitch } from "../Button/ThemeSwitch";
@@ -18,7 +18,9 @@ export const NavbarNew = ({ children }) => {
     `
 
     return (
+        <>
         <StickNav
+            
             justifyContent='space-between'
             alignItems='center'
             minHeight='42px'
@@ -51,6 +53,7 @@ export const NavbarNew = ({ children }) => {
             </Icon>
             <ThemeSwitch />
         </StickNav>
+        </>
     )
 }
 

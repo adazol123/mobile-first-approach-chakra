@@ -35,7 +35,7 @@ const fontSizes = {
   xl: '20px',
   '2xl': '24px',
   '3xl': '28px',
-  '4xl': '36px',
+  '4xl': '30px',
   '5xl': '48px',
   '6xl': '64px',
 }
@@ -98,7 +98,7 @@ export const overrides = extendTheme({
     colors,
     radii,
     config: {
-      cssVarPrefix: "ck",
+      cssVarPrefix: "theme",
     },
     
   })

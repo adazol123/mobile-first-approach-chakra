@@ -23,13 +23,14 @@ export const Button = {
         outline: {
             border: '.1px solid',
             borderColor: 'custom.secondary',
-            color: 'custom.secondary'
+            color: 'custom.secondary',
+            _focus: { bg: 'gray.100', boxShadow: 'md'},
         },
         solid: {
             bg: 'custom.secondary',
             color: 'gray.800',
             _hover: { bg: 'gray.100'},
-            _focus: { bg: 'gray.100'},
+            _focus: { bg: 'gray.100', boxShadow: 'none'},
             _pressed: { bg: 'gray.100'},
             _active: { bg: 'none', color: 'white',  border: '1px solid', borderColor: 'custom.secondary',},
         }
