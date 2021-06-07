@@ -13,6 +13,7 @@ export const Home = () => {
             height='100vh'
             width={['100%','100%']}
             pb={['100px', '0']}
+            transition=' 2s ease'
         >
             <Flex
                 flexDirection='column'
@@ -49,10 +50,11 @@ export const Home = () => {
             <Text mt={4} pb={8} fontSize={['md','xl']} maxW='60ch'color={colorMode === 'dark'? 'gray.400' : 'gray.300'} >Wanna be a developer with background in computer hardware. I am currently working and learning with React JS, Next JS, Node JS, Figma Design and Blender for 3D graphics objects.</Text>
             <Button 
                 variant='outline'
+                transition='2s ease'  
                 // borderColor={colorMode === 'dark'? 'custom.primary' : 'custom.secondary'}
                 // color={colorMode === 'dark'? 'custom.primary' : 'custom.secondary'}
                 
-            > <NextLink href='#Main' passHref>Know me more</NextLink></Button>
+            > <NextLink href='#Main'>Know me more</NextLink></Button>
         </Flex>
     )
 }

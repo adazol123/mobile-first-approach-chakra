@@ -19,7 +19,7 @@ export const Container = ({ children }) => {
         position: sticky;
         z-index: 1000;
         top: 0;
-        backdrop-filter: ${isMenu? 'none' : 'saturate(0%) blur(4px)' };
+        backdrop-filter: ${isMenu? 'none' : 'saturate(180%) blur(10px)' };
     `
 
     return (
@@ -28,7 +28,8 @@ export const Container = ({ children }) => {
                         mb={[2,4,8]}
                         py={1}
                         as='header'
-                        background={colorMode === 'dark'? 'whiteAlpha.700' : 'blackAlpha.700'}
+                        background={colorMode === 'dark'? 'whiteAlpha.800' : 'blackAlpha.800'}
+                        transition=' 2s ease'
         >
         <NavbarNew isMenu={isMenu} setMenu={setMenu}/>
         </StickNav>

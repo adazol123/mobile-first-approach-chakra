@@ -26,6 +26,7 @@ const GlobalStyle = ({ children }) => {
           flex-direction: column;
           min-height: 100vh;
           background: ${colorMode === 'light'? 'white' : '#262F3D'};
+          scroll-behavior: smooth;
         }
       `}
     />

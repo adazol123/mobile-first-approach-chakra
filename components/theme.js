@@ -52,8 +52,8 @@ const colors = {
     400: '#6D6D7A',
     500: '#43434D',
     600: '#262F3D',
-    700: '#262F3D',
-    800: '#43434D', //theme dark color
+    700: '#1A1A26',
+    800: '#13161D', //theme dark color
     900: '#0A1931',
   },
   custom: {
