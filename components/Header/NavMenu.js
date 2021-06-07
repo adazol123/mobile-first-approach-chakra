@@ -11,12 +11,12 @@ export const NavMenu = ( { isMenu, closed }) => {
         top: 0px;
         height: 100vh;
         z-index: -1;
-        width: 100vw;
+        width: ${isMenu?'100%':'0'};
         backdrop-filter: saturate(50%) blur(10px);
         flex-direction: column;
-        transform: translateX(${isMenu?'0':'100'}%);
-        opacity: ${isMenu?'1':'1'};
-        transition: transform 3s ease;
+        // transform: translateX(${isMenu?'0':'100'}%);
+        opacity: ${isMenu?'1':'0'};
+        transition: all 1s ease;
         display: ${isMenu?'Flex':'none'};;
 
 
@@ -25,25 +25,19 @@ export const NavMenu = ( { isMenu, closed }) => {
         <NavMenuContainer
             background='blackAlpha.800'
             alignItems='center'
+            justifyContent='center'
             transition='2s'          
-            
+            pointerEvents='auto'
+            onClick={() => {closed(!isMenu)}}
         >
             <Flex minHeight='50px' justifyContent='center' alignItems='center'>
-            <Icon 
-                fill='gray.300' 
-                _hover={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
-                _focus={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
-                _active={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
-                _pressed={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
-                viewBox="0 0 23 25" boxSize={6}>
-                {logo}
-            </Icon>
+           
             </Flex>
             <CenterWrapper>
                 
             <Box 
-                height='90%'
-                width='90%'
+                height='80%'
+                width='80%'
                 mt={1}
                 p='30px'
                 borderRadius='10px'
@@ -51,8 +45,9 @@ export const NavMenu = ( { isMenu, closed }) => {
                 background={colorMode === 'dark'? 'whiteAlpha.200':'blackAlpha.300'}
                 zIndex='1000'
                 
+                pointerEvents='none'
             >
-                <Flex
+                {/* <Flex
                     justifyContent='space-between'
                     alignItems='center'
                     height='42px'
@@ -64,12 +59,11 @@ export const NavMenu = ( { isMenu, closed }) => {
                         onClick={() => {closed(!isMenu)}}
                     >
                     
-                    {/* <Icon >{hamburger_cancel} </Icon> */}
-                    Cancel
+
                     </Button>
-                    <Text color={colorMode === 'dark'? 'custom.primary': 'custom.secondary'}>Menu</Text>
-                </Flex>
-                <Flex flexDir='column' width='100%' height='80%' alignContent='center' justifyContent='center'  >
+                    <Text color={colorMode === 'dark'? 'custom.primary': 'custom.secondary'}>Menu</Text >
+                </Flex> */}
+                <Flex flexDir='column' width='100%' height='auto' alignContent='center' justifyContent='start'  pointerEvents='auto'>
                     <Button m={2} variant='outline' color={colorMode === 'dark'? 'custom.primary': 'custom.secondary'} borderColor={colorMode === 'dark'? 'custom.primary': 'custom.secondary'} >Home</Button>
                     <Button m={2} variant='outline' color={colorMode === 'dark'? 'custom.primary': 'custom.secondary'} borderColor={colorMode === 'dark'? 'custom.primary': 'custom.secondary'} >Blog</Button>
                     <Button m={2} variant='outline' color={colorMode === 'dark'? 'custom.primary': 'custom.secondary'} borderColor={colorMode === 'dark'? 'custom.primary': 'custom.secondary'} >Portfolio</Button>

@@ -14,8 +14,8 @@ export const NavbarNew = ({ children ,isMenu, setMenu }) => {
         // position: sticky;
         // z-index: 10;
         // top: 0;
-        // backdrop-filter: saturate(0%) blur(20px);
-        // transition: height 0.5s, line-height 0.5s;
+        // backdrop-filter: saturate(100%) blur(20px);
+        transition: height 0.5s, line-height 0.5s;
         // min-height: 42px;
         
     `

@@ -17,20 +17,18 @@ export const Container = ({ children }) => {
 
     const StickNav = styled(Flex)`
         position: sticky;
-        z-index: 10;
+        z-index: 1000;
         top: 0;
-        backdrop-filter: ${isMenu? 'none': 'saturate(140%) blur(3px)'};
-        transition: height 0.5s, line-height 0.5s;
-        box-shadow: -1px 4px 10px 2px rgba(0,0,0,.1);
+        backdrop-filter: ${isMenu? 'none' : 'saturate(0%) blur(4px)' };
     `
 
     return (
         <>
         <StickNav
-                        mt={[2,4,8]}
                         mb={[2,4,8]}
                         py={1}
                         as='header'
+                        background={colorMode === 'dark'? 'whiteAlpha.700' : 'blackAlpha.700'}
         >
         <NavbarNew isMenu={isMenu} setMenu={setMenu}/>
         </StickNav>

@@ -4,9 +4,9 @@ export const CenterWrapper = ({ children }) => {
     return (
         <Flex
             flexDirection='column'
-            justifySelf='center'
-            align='center'
-            height='auto'
+            justifyContent='center'
+            alignItems='center'
+            height='100%'
             maxW='1200px'
             mx='auto'
             px={[4, 6, 8]}
