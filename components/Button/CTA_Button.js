@@ -3,9 +3,11 @@ import { mode, createBreakpoints } from "@chakra-ui/theme-tools"
 export const Button = {
     
     baseStyle: {
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
-        borderRadius:'md'
+        // fontWeight: 'semibold',
+        // textTransform: 'uppercase',
+        borderRadius:'10px',
+        _focus: { boxShadow: 'none'},
+        // color: 'white'
     },
     sizes: {
         sm: {
@@ -21,18 +23,19 @@ export const Button = {
     },
     variants: {
         outline: {
-            border: '.1px solid',
-            borderColor: 'custom.secondary',
-            color: 'custom.secondary',
-            _focus: { bg: 'gray.100', boxShadow: 'md'},
+            // border: '3px solid',
+            // borderColor: 'blackAlpha.700'
+            // _focus: { bg: 'blackAlpha.200', boxShadow: 'md'},
         },
         solid: {
-            bg: 'custom.secondary',
-            color: 'gray.800',
-            _hover: { bg: 'gray.100'},
-            _focus: { bg: 'gray.100', boxShadow: 'none'},
-            _pressed: { bg: 'gray.100'},
-            _active: { bg: 'none', color: 'white',  border: '1px solid', borderColor: 'custom.secondary',},
+            // bg: 'blackAlpha.500',
+            // _hover: { bg: 'blackAlpha.400'},
+            // _focus: { bg: 'blackAlpha.400', boxShadow: 'none'},
+            // _pressed: { bg: 'blackAlpha.300'},
+            // _active: { bg: 'blackAlpha.600', color: 'white', },
+        }, 
+        ghost: {
+
         }
     },
     defaultProps: {

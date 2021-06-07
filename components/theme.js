@@ -43,7 +43,7 @@ const fontSizes = {
 const colors = {
   transparent: 'transparent',
   black: '#0A1931',
-  white: '#F3F6F9', //main light color
+  white: '#F3F6F9', //theme light color
   gray: {
     50: '#F3F6F9',
     100: '#F3F6F9',
@@ -53,8 +53,8 @@ const colors = {
     500: '#43434D',
     600: '#262F3D',
     700: '#262F3D',
-    800: '#262F3D', //main dark color
-    900: '0A1931',
+    800: '#43434D', //theme dark color
+    900: '#0A1931',
   },
   custom: {
     primary: '#2ACB9D',

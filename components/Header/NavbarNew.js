@@ -3,10 +3,13 @@ import NextLink from 'next/link'
 import styled from "@emotion/styled";
 import { ThemeSwitch } from "../Button/ThemeSwitch";
 import { hamburger, hamburger_cancel, theme, logo, sun, moon } from "./icons";
+import { NavMenu } from "./NavMenu";
+import { useState } from "react";
 
-export const NavbarNew = ({ children }) => {
+export const NavbarNew = ({ children ,isMenu, setMenu }) => {
 
     const { colorMode } = useColorMode()
+    
     const StickNav = styled(Flex)`
         // position: sticky;
         // z-index: 10;
@@ -32,16 +35,29 @@ export const NavbarNew = ({ children }) => {
             px={[4,6,8]}
             mx='auto'
         >
+            <Button padding={1} aria-label='Toggle Dark Mode'variant='ghost'>
+                {isMenu? <Icon 
+                    fill='gray.300' 
+                    onClick={() =>{setMenu(!isMenu)}}
+                    _hover={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
+                    _focus={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
+                    _active={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
+                    _pressed={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
+                    viewBox="0 0 23 22" boxSize={6}>
+                    {hamburger_cancel }
+                </Icon>
                 
-            <Icon 
-                fill='gray.300' 
-                _hover={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
-                _focus={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
-                _active={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
-                _pressed={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
-                viewBox="0 0 23 22" boxSize={6}>
-                {hamburger}
-            </Icon>
+                :<Icon 
+                    fill='gray.300' 
+                    onClick={() =>{setMenu(!isMenu)}}
+                    _hover={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
+                    _focus={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
+                    _active={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
+                    _pressed={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
+                    viewBox="0 0 23 22" boxSize={6}>
+                    {hamburger}
+                </Icon>}
+                </Button>
             <Icon 
                 fill='gray.300' 
                 _hover={{ fill:colorMode === 'dark'? 'custom.primary': 'custom.secondary'}}
@@ -53,6 +69,7 @@ export const NavbarNew = ({ children }) => {
             </Icon>
             <ThemeSwitch />
         </StickNav>
+        <NavMenu isMenu={isMenu} closed={setMenu}/>
         </>
     )
 }

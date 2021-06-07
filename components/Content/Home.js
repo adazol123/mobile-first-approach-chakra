@@ -1,6 +1,7 @@
 import { Stack, Heading, Flex, Text, useColorMode, Button } from "@chakra-ui/react"
 import Typical from 'react-typical'
 import { data } from "./type-data"
+import NextLink from 'next/link'
 
 export const Home = () => {
     const { colorMode } = useColorMode()
@@ -9,7 +10,7 @@ export const Home = () => {
             flexDirection={['column']}
             alignItems={['start']}
             justifyContent={['flex-end', 'center']}
-            height='90vh'
+            height='100vh'
             width={['100%','100%']}
             pb={['100px', '0']}
         >
@@ -41,16 +42,17 @@ export const Home = () => {
                 flexWrap='nowrap'
                 
                 >
-                    <Text mr={[2,4]} as='h2' minWidth='62px'>I Am a</Text>
-                    <Text color={colorMode === 'dark'? 'custom.primary' : 'custom.secondary' }minWidth='max-content' ><Typical steps={data} loop={Infinity} wrapper='h2'/></Text>
+                    <Text mr={[2,4]} minWidth='62px'>I Am a</Text>
+                    <Text color={colorMode === 'dark'? 'custom.primary' : 'custom.secondary' }minWidth='max-content' ><Typical steps={data} loop={Infinity}/></Text>
                  </Heading>
             </Flex>
             <Text mt={4} pb={8} fontSize={['md','xl']} maxW='60ch'color={colorMode === 'dark'? 'gray.400' : 'gray.300'} >Wanna be a developer with background in computer hardware. I am currently working and learning with React JS, Next JS, Node JS, Figma Design and Blender for 3D graphics objects.</Text>
             <Button 
                 variant='outline'
-                borderColor={colorMode === 'dark'? 'custom.primary' : 'custom.secondary'}
-                color={colorMode === 'dark'? 'custom.primary' : 'custom.secondary'}
-            >Know me more</Button>
+                // borderColor={colorMode === 'dark'? 'custom.primary' : 'custom.secondary'}
+                // color={colorMode === 'dark'? 'custom.primary' : 'custom.secondary'}
+                
+            > <NextLink href='#Main' passHref>Know me more</NextLink></Button>
         </Flex>
     )
 }

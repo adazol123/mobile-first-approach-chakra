@@ -5,6 +5,7 @@ import { Navbar } from '../components/Header/Navbar'
 import styles from '../styles/Home.module.css'
 import { Home as Content } from '../components/Content/Home'
 import { Container } from '../components/Wrapper/Container'
+import { Section } from '../components/Content/Section'
 
 export default function Home() {
   const { toggleColorMode } = useColorMode()
@@ -16,6 +17,7 @@ export default function Home() {
       <title>Adazolhub</title>
       </Head>
       <Content/>
+      <Section/>
     </Container>
   )
 
