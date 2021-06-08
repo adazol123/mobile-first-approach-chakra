@@ -28,11 +28,13 @@ export const Button =  {
             _hover: { textDecoration: 'none', opacity: 0.6}
             
         }),
-        outline: {
-            // border: '3px solid',
+        outline: (props) => ({
+            color: mode('custom.secondary', 'custom.primary')(props),
+            borderColor: mode('custom.secondary', 'custom.primary')(props),
+            // border: '1px dotted',
             // borderColor: 'blackAlpha.700'
             // _focus: { bg: 'blackAlpha.200', boxShadow: 'md'},
-        },
+        }),
         solid: {
             // bg: 'blackAlpha.500',
             // _hover: { bg: 'blackAlpha.400'},

@@ -1,11 +1,11 @@
-import { Box, Flex, Text } from "@chakra-ui/react"
+import { Box, Flex, Text, useColorMode } from "@chakra-ui/react"
 import { AnimatePresence, m, LazyMotion } from "framer-motion"
 
 const loadFeatures = () => 
     import('../features.js').then(res => res.default)
 
 const ModalNav = ( { children, open, setOpen }) => {
-    
+    const { colorMode } = useColorMode()
     return (
         <LazyMotion features={loadFeatures}>
             <AnimatePresence>
@@ -31,22 +31,24 @@ const ModalNav = ( { children, open, setOpen }) => {
                     <Box
                         as={m.div}
                         position='fixed'
-                        top='59px'
+                        top='0'
                         right='0'
                         left='0'
                         marginX='auto'
-                        width='94%'
+                        pt='46px'
+                        width='100%'
                         height='390px'
-                        borderRadius='10px'
-                        background='blackAlpha.200'
+                        borderBottomLeftRadius='20px'
+                        borderBottomRightRadius='20px'
+                        background={colorMode === 'dark'? 'whiteAlpha.400' : 'blackAlpha.800'}
                         padding='2px'
-                        backdropFilter=' saturate(150%) blur(80px)'
+                        backdropFilter=' saturate(70%) blur(100px)'
                         className='modal-content-wrapper'
                         zIndex='1'
-        
-                        initial={{ scale: 1, y: '-150%',  }}
-                        animate={{ scale: 1, y: 0, transition: { duration: 0.4, ease: "easeInOut" } }}
-                        exit={{ y: '-150%', transition: { duration: 0.4 } }}
+                        mt='50px'
+                        initial={{ opacity: 0, y: '-150%',  }}
+                        animate={{ opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeInOut" } }}
+                        exit={{ opacity: 0 ,y: '-150%', transition: { duration: 0.4 } }}
                     >
                     <Flex
                         as={m.div}
@@ -57,6 +59,7 @@ const ModalNav = ( { children, open, setOpen }) => {
                         alignContent='stretch'
                         gridGap={5}
                         p={5}
+                        zIndex='1'
                     >
                     {children}
                     </Flex>
