@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
 import { AnimatePresence, m, LazyMotion } from "framer-motion"
 
 const loadFeatures = () => 
@@ -16,6 +16,7 @@ const ModalNav = ( { children, open, setOpen }) => {
                     position='fixed'
                     top='0'
                     left='0'
+                    marginX='auto'
                     height='100vh'
                     width='100vw'
                     background='whiteAlpha.200'
@@ -24,20 +25,22 @@ const ModalNav = ( { children, open, setOpen }) => {
                     backdropFilter=' saturate(150%) blur(5px)'
                     initial={{ opacity: 0,  }}
                     animate={{ opacity: 1, transition: { duration: 0.4, ease: "easeInOut" } }}
-                    exit={{ opacity: 0, transition: { delay: 0.6 }}}
+                    exit={{ opacity: 0, transition: { delay: 0.4 }}}
                     onClick={() => setOpen(false)}
                 />
                     <Box
                         as={m.div}
                         position='fixed'
-                        inset='0'
-                        margin='auto'
-                        width='96%'
-                        height='78%'
+                        top='59px'
+                        right='0'
+                        left='0'
+                        marginX='auto'
+                        width='94%'
+                        height='50%'
                         borderRadius='10px'
                         background='blackAlpha.200'
                         padding='2px'
-                        backdropFilter=' saturate(150%) blur(30px)'
+                        backdropFilter=' saturate(150%) blur(80px)'
                         className='modal-content-wrapper'
                         zIndex='998'
         
@@ -47,10 +50,10 @@ const ModalNav = ( { children, open, setOpen }) => {
                     >
                     <Flex
                         as={m.div}
-                        flexDir='column's
+                        flexDir='column'
                         width='100%'
                         height='100%'
-                        justifyContent='center'
+                        justifyContent='flex-start'
                         alignContent='stretch'
                         gridGap={5}
                         p={5}
@@ -58,6 +61,7 @@ const ModalNav = ( { children, open, setOpen }) => {
                     {children}
                     </Flex>
                     </Box>
+                    <Text position='fixed' bottom='5%' textAlign='center' width='full' onClick={() => setOpen(false)} > Close </Text>
                 </>
             )}
             </AnimatePresence>
