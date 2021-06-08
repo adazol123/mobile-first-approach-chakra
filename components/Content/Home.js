@@ -2,8 +2,9 @@ import { Stack, Heading, Flex, Text, useColorMode, Button } from "@chakra-ui/rea
 import Typical from 'react-typical'
 import { data } from "./type-data"
 import NextLink from 'next/link'
+import { NavMenu } from "../Header/NavMenu"
 
-export const Home = () => {
+export const Home = ( ) => {
     const { colorMode } = useColorMode()
     return (
         <Flex
@@ -55,6 +56,7 @@ export const Home = () => {
                 // color={colorMode === 'dark'? 'custom.primary' : 'custom.secondary'}
                 
             > <NextLink href='#Main'>Know me more</NextLink></Button>
+            
         </Flex>
     )
 }

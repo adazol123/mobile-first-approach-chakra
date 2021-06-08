@@ -69,7 +69,7 @@ export const NavbarNew = ({ children ,isMenu, setMenu }) => {
             </Icon>
             <ThemeSwitch />
         </StickNav>
-        <NavMenu isMenu={isMenu} closed={setMenu}/>
+        
         </>
     )
 }

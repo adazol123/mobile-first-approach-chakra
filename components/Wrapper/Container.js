@@ -5,11 +5,11 @@ import { ThemeSwitch } from "../Button/ThemeSwitch";
 import { NavbarNew } from "../Header/NavbarNew";
 import { CenterWrapper } from "./Center";
 import { useState } from "react";
+import { NavMenu } from "../Header/NavMenu";
 
 export const Container = ({ children }) => {
-
+    const [ isMenu, setMenu ] = useState(false)
     const { colorMode } = useColorMode()
-    const [ isMenu, setMenu] = useState(false)
     const backgroundColor = {
         light: '#F3F6F9',
         dark: '#262F3D',
@@ -36,6 +36,7 @@ export const Container = ({ children }) => {
         <CenterWrapper>
             { children }
         </CenterWrapper>
+        <NavMenu isMenu={isMenu} setMenu={setMenu}/>
         </>
     )
 }
