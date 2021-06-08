@@ -42,11 +42,11 @@ const ModalNav = ( { children, open, setOpen }) => {
                         padding='2px'
                         backdropFilter=' saturate(150%) blur(80px)'
                         className='modal-content-wrapper'
-                        zIndex='998'
+                        zIndex='1'
         
-                        initial={{ scale: 1, x: '150%',  }}
-                        animate={{ scale: 1, x: 0, transition: { duration: 0.4, ease: "easeInOut" } }}
-                        exit={{ x: '150%', transition: { duration: 0.4 } }}
+                        initial={{ scale: 1, y: '-150%',  }}
+                        animate={{ scale: 1, y: 0, transition: { duration: 0.4, ease: "easeInOut" } }}
+                        exit={{ y: '-150%', transition: { duration: 0.4 } }}
                     >
                     <Flex
                         as={m.div}
@@ -61,7 +61,11 @@ const ModalNav = ( { children, open, setOpen }) => {
                     {children}
                     </Flex>
                     </Box>
-                    <Text position='fixed' bottom='5%' textAlign='center' width='full' onClick={() => setOpen(false)} > Close </Text>
+                    <Text as={m.p}
+                        initial={{ opacity: 0, y: '-150%',  }}
+                        animate={{ opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeInOut" } }}
+                        exit={{  opacity: 0, y: '-150%', transition: { duration: 0.4 } }}
+                    position='fixed' bottom='5%' textAlign='center' width='full' onClick={() => setOpen(false)} > Close </Text>
                 </>
             )}
             </AnimatePresence>
