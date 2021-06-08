@@ -36,7 +36,7 @@ const ModalNav = ( { children, open, setOpen }) => {
                         left='0'
                         marginX='auto'
                         width='94%'
-                        height='50%'
+                        height='390px'
                         borderRadius='10px'
                         background='blackAlpha.200'
                         padding='2px'
