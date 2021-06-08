@@ -17,12 +17,11 @@ const ModalNav = ( { children, open, setOpen }) => {
                     width='100vw'
                     background='blackAlpha.500'
                     className='modal-backdrop'
-                    zIndex='1000'
                     overflow='hidden'
                     backdropFilter=' saturate(100%) blur(10px)'
                     initial={{ opacity: 0,  }}
-                    animate={{ opacity: 1, transition: { duration: 0.8 } }}
-                    exit={{ opacity: 0, transition: { delay: 0.4 }}}
+                    animate={{ opacity: 1, transition: { duration: 0.4, ease: "easeInOut" } }}
+                    exit={{ opacity: 0, transition: { delay: 0.6 }}}
                     onClick={() => setOpen(false)}
                 />
                     <Box
@@ -36,11 +35,10 @@ const ModalNav = ( { children, open, setOpen }) => {
                         background='whiteAlpha.300'
                         padding='2px'
                         className='modal-content-wrapper'
-                        zIndex='1001'
         
                         initial={{ scale: 1, x: 500,  }}
-                        animate={{ scale: 1, x: 0, transition: { duration: 0.8 } }}
-                        exit={{ x: 500, transition: { duration: 0.8 } }}
+                        animate={{ scale: 1, x: 0, transition: { duration: 0.4, ease: "easeInOut" } }}
+                        exit={{ x: 500, transition: { duration: 0.4 } }}
                     >
                     <Flex
                         as={motion.div}
