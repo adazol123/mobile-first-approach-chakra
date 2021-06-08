@@ -37,9 +37,9 @@ const ModalNav = ( { children, open, setOpen }) => {
                         marginX='auto'
                         pt='46px'
                         width='100%'
-                        height='390px'
-                        borderBottomLeftRadius='20px'
-                        borderBottomRightRadius='20px'
+                        height='320px'
+                        borderBottomLeftRadius='10px'
+                        borderBottomRightRadius='10px'
                         background={colorMode === 'dark'? 'whiteAlpha.400' : 'blackAlpha.800'}
                         padding='2px'
                         backdropFilter=' saturate(70%) blur(100px)'
