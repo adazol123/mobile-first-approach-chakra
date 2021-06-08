@@ -1,6 +1,6 @@
 import { mode, createBreakpoints } from "@chakra-ui/theme-tools"
 
-export const Button = {
+export const Button =  {
     
     baseStyle: {
         // fontWeight: 'semibold',
@@ -22,6 +22,12 @@ export const Button = {
         }
     },
     variants: {
+        link: (props) => ({
+            color: mode('custom.secondary', 'custom.primary')(props),
+            textDecoration: 'none',
+            _hover: { textDecoration: 'none', opacity: 0.6}
+            
+        }),
         outline: {
             // border: '3px solid',
             // borderColor: 'blackAlpha.700'

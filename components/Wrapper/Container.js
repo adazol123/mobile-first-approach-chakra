@@ -28,7 +28,7 @@ export const Container = ({ children }) => {
                         mb={[2,4,8]}
                         py={1}
                         as='header'
-                        background={colorMode === 'dark'? 'whiteAlpha.800' : 'blackAlpha.800'}
+                        background={colorMode === 'dark'? 'whiteAlpha.400' : 'blackAlpha.800'}
                         transition=' 2s ease'
         >
         <NavbarNew isMenu={isMenu} setMenu={setMenu}/>

@@ -11,10 +11,10 @@ export const NavMenu = ({ isMenu, setMenu} ) => {
    return (
     <>
     <ModalNav  open={isMenu} setOpen={setMenu}>
-       <Button variant='outline' >Home</Button>
-       <Button variant='outline' >Portfolio</Button>
-       <Button variant='outline' >Blog</Button>
-       <Button variant='outline' >About</Button>
+       <Button height='120px' variant='outline' >Home</Button>
+       <Button height='120px' variant='outline' >Portfolio</Button>
+       <Button height='120px' variant='outline' >Blog</Button>
+       <Button height='120px' variant='outline' >About</Button>
     </ModalNav>
     </>
    )
