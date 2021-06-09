@@ -46,9 +46,9 @@ const ModalNav = ( { children, open, setOpen }) => {
                         className='modal-content-wrapper'
                         zIndex='1'
                         mt='50px'
-                        initial={{ opacity: 0, y: '-150%',  }}
-                        animate={{ opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeInOut" } }}
-                        exit={{ opacity: 0 ,y: '-150%', transition: { duration: 0.4 } }}
+                        initial={{ opacity: 1, height: '0',  }}
+                        animate={{ opacity: 1, height: '320px', transition: { duration: 0.4, ease: "easeInOut" } }}
+                        exit={{ opacity: 1 ,height: '0', transition: { duration: 0.4, delay: 0.4  } }}
                     >
                     <Flex
                         as={m.div}
@@ -60,6 +60,9 @@ const ModalNav = ( { children, open, setOpen }) => {
                         gridGap={5}
                         p={5}
                         zIndex='1'
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1, height: '100%', transition: { duration: 0.4, delay: 0.4, ease: "easeInOut" } }}
+                        exit={{ opacity: 0 ,height: '0', transition: { duration: 0.4} }}
                     >
                     {children}
                     </Flex>
